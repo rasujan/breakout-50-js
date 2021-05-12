@@ -1,0 +1,88 @@
+$linen: #fff1e6;
+$magnolia: #eae4e9;
+$pale-pink: #fde2e4;
+$mimi-pink: #fad2e1;
+$mint-cream: #e2ece9;
+$powder-blue: #bee1e6;
+$periwinkle-crayola: #cddafd;
+$black: #333;
+$gray: #555555;
+
+@font-face {
+  font-family: nunito;
+  src: url("../assets/Nunito/Nunito-Regular.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $periwinkle-crayola;
+  color: $gray;
+  font-family: nunito;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+canvas {
+  background-color: $magnolia;
+  border-radius: 8px;
+  display: block;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 12px;
+  border: 0;
+  background-color: $linen;
+  border: 1px solid $black;
+  border-radius: 4px;
+  box-shadow: 4px 4px 4px 2px rgba($gray, 0.5);
+}
+
+.btn:focus {
+  outline: o;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+}
+
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
+.rules-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.close-btn {
+  width: 100%;
+  box-shadow: 2px 2px 4px 2px rgba($mint-cream, 0.2);
+}
+
+.rules {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $gray;
+  color: $mint-cream;
+  padding: 20px;
+  max-width: 360px;
+  height: 100vh;
+  margin-right: 16px;
+  transform: translateX(-360px);
+  transition: ease-in-out 0.3s;
+}
+
+.rules.show {
+  transform: translateX(0px);
+}
